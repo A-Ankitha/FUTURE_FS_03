@@ -273,7 +273,7 @@ export const GALLERY_ITEMS = [
     src:
       'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1000&auto=format&fit=crop&q=80',
     alt: 'Japanese ramen bowl',
-    caption: 'Japanese Ramen',
+    caption: 'Tonkotsu Ramen',
   },
 
   {
@@ -287,73 +287,73 @@ export const GALLERY_ITEMS = [
 
   {
     id: 3,
-    category: 'japan',
+    category: 'ambience',
     src:
-      'https://images.unsplash.com/photo-1775807674880-e0ef33226fa0?w=1000&auto=format&fit=crop&q=80',
-    alt: 'Japanese ramen restaurant at night',
-    caption: 'Japanese Night Dining',
+      'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1000&auto=format&fit=crop&q=80',
+    alt: 'Japanese-inspired restaurant ambience',
+    caption: 'Dining Atmosphere',
   },
 
   {
     id: 4,
     category: 'food',
     src:
-      'https://images.unsplash.com/photo-1747471447806-c56d99c348cd?w=1000&auto=format&fit=crop&q=80',
-    alt: 'Japanese nigiri sushi',
+      'https://images.unsplash.com/photo-1617196034183-421b4040ed20?w=1000&auto=format&fit=crop&q=80',
+    alt: 'Japanese sushi',
     caption: 'Salmon Nigiri',
   },
 
   {
     id: 5,
-    category: 'japan',
+    category: 'ambience',
     src:
-      'https://images.unsplash.com/photo-1775807674880-e0ef33226fa0?w=1000&auto=format&fit=crop&q=80',
-    alt: 'Japanese ramen street atmosphere',
-    caption: 'Japanese Street Food',
+      'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1000&auto=format&fit=crop&q=80',
+    alt: 'Restaurant interior atmosphere',
+    caption: 'Evening Atmosphere',
   },
 
   {
     id: 6,
     category: 'food',
     src:
-      'https://images.unsplash.com/photo-1738681336104-608b4e7dc3b0?w=1000&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=1000&auto=format&fit=crop&q=80',
     alt: 'Japanese gyoza dumplings',
-    caption: 'Gyoza',
+    caption: 'Crispy Gyoza',
   },
 
   {
     id: 7,
-    category: 'food',
+    category: 'people',
     src:
-      'https://images.unsplash.com/photo-1637074930269-089fde202b57?w=1000&auto=format&fit=crop&q=80',
-    alt: 'Japanese sushi',
-    caption: 'Sushi & Nigiri',
+      'https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=1000&auto=format&fit=crop&q=80',
+    alt: 'Friends dining together',
+    caption: 'Moments Together',
   },
 
   {
     id: 8,
-    category: 'japan',
+    category: 'ambience',
     src:
-      'https://images.unsplash.com/photo-1775807674880-e0ef33226fa0?w=1000&auto=format&fit=crop&q=80',
-    alt: 'Japanese ramen shop atmosphere',
-    caption: 'Ramen Shop Nights',
+      'https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=1000&auto=format&fit=crop&q=80',
+    alt: 'Japanese-inspired interior',
+    caption: 'Japanese-Inspired Decor',
   },
 
   {
     id: 9,
-    category: 'dessert',
+    category: 'food',
     src:
-      'https://images.unsplash.com/photo-1783311392897-dd9167b50a85?w=1000&auto=format&fit=crop&q=80',
-    alt: 'Japanese mochi and dango',
+      'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1000&auto=format&fit=crop&q=80',
+    alt: 'Japanese-inspired dessert',
     caption: 'Mochi & Dango',
   },
 
   {
     id: 10,
-    category: 'beverages',
+    category: 'food',
     src:
       'https://images.unsplash.com/photo-1560148196-df61132466ce?w=1000&auto=format&fit=crop&q=80',
-    alt: 'Japanese matcha latte',
+    alt: 'Matcha latte',
     caption: 'Matcha Latte',
   },
 
@@ -368,7 +368,7 @@ export const GALLERY_ITEMS = [
 
   {
     id: 12,
-    category: 'japan',
+    category: 'ambience',
     src:
       'https://images.unsplash.com/photo-1775807674880-e0ef33226fa0?w=1000&auto=format&fit=crop&q=80',
     alt: 'Japanese ramen restaurant at night',

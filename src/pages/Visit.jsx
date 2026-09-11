@@ -11,11 +11,9 @@ import SectionHeading from '../components/SectionHeading';
 import { BUSINESS } from '../data/business';
 
 export default function Visit() {
-  const phoneAvailable =
-    !BUSINESS.contact.phone.includes('XXXXX');
-
-  const whatsappAvailable =
-    !BUSINESS.contact.whatsapp.includes('XXXXX');
+  const phoneAvailable = Boolean(BUSINESS.contact.phone);
+  const whatsappAvailable = Boolean(BUSINESS.contact.whatsapp);
+  const emailAvailable = Boolean(BUSINESS.contact.email);
 
   return (
     <div className="page">
@@ -41,12 +39,14 @@ export default function Visit() {
         <div className="container">
           <SectionHeading
             eyebrow="Concept Location"
-            title="Find Us in Mangalore"
+            title="Concept Location in Mangalore"
             subtitle="Location, contact and opening information shown here is development content and should be verified before any public or production use."
           />
 
           <div className="visit-grid">
             <div className="visit-details">
+
+              {/* Address */}
               <div className="info-card">
                 <div className="info-icon">
                   <MapPin />
@@ -54,6 +54,7 @@ export default function Visit() {
 
                 <div>
                   <span>Address</span>
+
                   <p>
                     {BUSINESS.address.line1}
                     <br />
@@ -67,85 +68,92 @@ export default function Visit() {
                 </div>
               </div>
 
+              {/* Hours */}
               <div className="info-card">
                 <div className="info-icon">
                   <Clock3 />
                 </div>
 
                 <div>
-                  <span>Opening Hours</span>
+                  <span>Concept Hours</span>
 
-                  {BUSINESS.hours.map(
-                    (hour) => (
-                      <p key={hour.days}>
-                        <strong>
-                          {hour.days}
-                        </strong>
-                        <br />
-                        {hour.time}
-                      </p>
-                    )
+                  {BUSINESS.hours.map((hour) => (
+                    <p key={hour.days}>
+                      <strong>
+                        {hour.days}
+                      </strong>
+                      <br />
+                      {hour.time}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              {/* Phone — only show when available */}
+              {phoneAvailable && (
+                <div className="info-card">
+                  <div className="info-icon">
+                    <Phone />
+                  </div>
+
+                  <div>
+                    <span>Call Us</span>
+
+                    <p>
+                      {BUSINESS.contact.phone}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Actions */}
+              {(phoneAvailable || whatsappAvailable) && (
+                <div className="visit-actions">
+
+                  {phoneAvailable && (
+                    <a
+                      href={`tel:${BUSINESS.contact.phone}`}
+                      className="btn-primary"
+                    >
+                      <Phone size={17} />
+                      Call
+                    </a>
                   )}
+
+                  {whatsappAvailable && (
+                    <a
+                      href={`https://wa.me/${BUSINESS.contact.whatsapp.replace(
+                        /\D/g,
+                        ''
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-outline"
+                    >
+                      <MessageCircle size={17} />
+                      WhatsApp
+                    </a>
+                  )}
+
                 </div>
-              </div>
+              )}
 
-              <div className="info-card">
-                <div className="info-icon">
-                  <Phone />
-                </div>
-
-                <div>
-                  <span>Call Us</span>
-
-                  <p>
-                    {BUSINESS.contact.phone}
-                  </p>
-                </div>
-              </div>
-
-              <div className="visit-actions">
-                <a
-                  href={
-                    phoneAvailable
-                      ? `tel:${BUSINESS.contact.phone}`
-                      : '#'
-                  }
-                  className="btn-primary"
-                  onClick={(event) => {
-                    if (!phoneAvailable) {
-                      event.preventDefault();
-                    }
-                  }}
-                >
-                  <Phone size={17} />
-                  Call
-                </a>
-
-                <a
-                  href={
-                    whatsappAvailable
-                      ? `https://wa.me/${BUSINESS.contact.whatsapp.replace(
-                          /\D/g,
-                          ''
-                        )}`
-                      : '#'
-                  }
-                  className="btn-outline"
-                  onClick={(event) => {
-                    if (!whatsappAvailable) {
-                      event.preventDefault();
-                    }
-                  }}
-                >
-                  <MessageCircle size={17} />
-                  WhatsApp
-                </a>
-              </div>
+              {/* Development-only contact note */}
+              {!phoneAvailable &&
+                !whatsappAvailable &&
+                !emailAvailable && (
+                  <div className="verification-note">
+                    <strong>Contact information:</strong>{' '}
+                    Phone, WhatsApp and email details are not
+                    provided in this independent concept project.
+                  </div>
+                )}
             </div>
 
+            {/* Map */}
             <div className="map-card">
               <iframe
-                title="Itadaki Ramen Shop location map"
+                title="Concept location map for Mangalore"
                 src={BUSINESS.mapsEmbedUrl}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
