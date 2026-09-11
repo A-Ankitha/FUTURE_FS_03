@@ -3,7 +3,7 @@ import { Flame } from 'lucide-react';
 const TAG_STYLES = {
   Veg: 'tag-veg',
   'Non-Veg': 'tag-nonveg',
-  "Chef's Special": 'tag-special',
+  "Featured": 'tag-special',
   Spicy: 'tag-spicy',
 };
 
@@ -20,7 +20,7 @@ export default function DishCard({ item }) {
 
         {item.popular && (
           <span className="dish-popular">
-            Popular
+            Featured
           </span>
         )}
 

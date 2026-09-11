@@ -17,24 +17,37 @@ export const BUSINESS = {
 
   kanjiLogo: '頂',
 
+  // ==========================================
+  // CONCEPT LOCATION
   // PLACEHOLDER — NOT VERIFIED
+  // ==========================================
+
   address: {
     line1: 'First Floor, Lotus Anuradha,',
     line2: 'Kodailbail, Mangalore',
     city: 'Mangalore',
     state: 'Karnataka',
     pincode: '575003',
-    full: 'First Floor, Lotus Anuradha, Kodailbail, Mangalore - 575003',
+    full:
+      'First Floor, Lotus Anuradha, Kodailbail, Mangalore - 575003',
   },
 
+  // ==========================================
+  // CONCEPT CONTACT
   // PLACEHOLDER — NOT VERIFIED
+  // ==========================================
+
   contact: {
-    phone: '+91 XXXXX XXXXX',
-    whatsapp: '+91 XXXXX XXXXX',
-    email: 'itadaki.mangalore@gmail.com',
+    phone: '',
+    whatsapp: '',
+    email: '',
   },
 
-  // PLACEHOLDER — NOT VERIFIED
+  // ==========================================
+  // SAMPLE HOURS
+  // NOT VERIFIED
+  // ==========================================
+
   hours: [
     {
       days: 'Mon – Sat',
@@ -46,29 +59,33 @@ export const BUSINESS = {
     },
   ],
 
-  // PLACEHOLDER — NOT VERIFIED
+  // ==========================================
+  // CONCEPT MAP
+  // LOCATION NOT VERIFIED
+  // ==========================================
+
   mapsEmbedUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0!2d74.856!3d12.868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDUyJzA0LjgiTiA3NMKwNTEnMjEuNiJF!5e0!3m2!1sen!2sin!4v1234567890',
 
   mapsLink:
     'https://maps.google.com/?q=Mangalore,Karnataka,India',
 
+  // No official social accounts are presented.
   social: {
-    instagram:
-      'https://instagram.com/itadaki.mangalore',
-
-    facebook:
-      'https://facebook.com/itadakimangalore',
-
-    youtube: '#',
+    instagram: '',
+    facebook: '',
+    youtube: '',
   },
 };
 
 
 // ==========================================
 // JAPANESE-INSPIRED CONCEPT MENU
-// NOTE: Items and prices are fictional placeholders
-// and are NOT verified Itadaki menu information.
+//
+// All menu items, prices, descriptions and
+// imagery are illustrative content created
+// for this independent student project.
+// They are NOT verified Itadaki information.
 // ==========================================
 
 export const MENU_ITEMS = [
@@ -81,7 +98,7 @@ export const MENU_ITEMS = [
     price: 280,
     image:
       'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&auto=format&fit=crop&q=80',
-    tags: ["Chef's Special", 'Non-Veg'],
+    tags: ['Featured', 'Non-Veg'],
     spicy: false,
     popular: true,
   },
@@ -151,7 +168,7 @@ export const MENU_ITEMS = [
     price: 390,
     image:
       'https://images.unsplash.com/photo-1637074930269-089fde202b57?w=800&auto=format&fit=crop&q=80',
-    tags: ['Sushi', "Chef's Special"],
+    tags: ['Sushi', 'Featured'],
     spicy: false,
     popular: false,
   },
@@ -235,7 +252,7 @@ export const MENU_ITEMS = [
     price: 180,
     image:
       'https://images.unsplash.com/photo-1783311392897-dd9167b50a85?w=800&auto=format&fit=crop&q=80',
-    tags: ['Matcha', "Chef's Special"],
+    tags: ['Matcha', 'Featured'],
     spicy: false,
     popular: false,
   },
@@ -244,7 +261,9 @@ export const MENU_ITEMS = [
 
 // ==========================================
 // JAPANESE-INSPIRED GALLERY
-// Placeholder imagery — not actual Itadaki photos.
+//
+// Placeholder imagery — these are NOT actual
+// Itadaki Ramen Shop photographs.
 // ==========================================
 
 export const GALLERY_ITEMS = [
@@ -254,7 +273,7 @@ export const GALLERY_ITEMS = [
     src:
       'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=1000&auto=format&fit=crop&q=80',
     alt: 'Japanese ramen bowl',
-    caption: 'Tonkotsu Ramen',
+    caption: 'Japanese Ramen',
   },
 
   {

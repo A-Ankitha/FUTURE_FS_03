@@ -4676,3 +4676,685 @@ main {
       none;
   }
 }
+
+/* =========================================================
+   FINAL LIVE DEMO POLISH
+========================================================= */
+
+/* HERO ALIGNMENT */
+.hero-inner {
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.hero-copy {
+  margin-left: 0;
+}
+
+.hero-kanji {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  color: rgba(212, 165, 116, 0.16);
+
+  font-family: "Noto Serif JP", serif;
+  font-size: clamp(130px, 18vw, 260px);
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   STORY BANNER
+========================================================= */
+
+.story-banner-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background-image:
+    url("https://images.unsplash.com/photo-1775807674880-e0ef33226fa0?w=1800&auto=format&fit=crop&q=80");
+
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.38;
+}
+
+.story-banner-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(13, 13, 13, 0.96) 0%,
+      rgba(13, 13, 13, 0.86) 50%,
+      rgba(13, 13, 13, 0.68) 100%
+    );
+}
+
+.story-banner-content {
+  position: relative;
+  z-index: 3;
+
+  width: min(1200px, calc(100% - 48px));
+  margin-inline: auto;
+
+  max-width: none;
+}
+
+.story-kanji-large {
+  margin-bottom: 12px;
+
+  color: rgba(212, 165, 116, 0.7);
+
+  font-family: "Noto Serif JP", serif;
+  font-size: 34px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   CONCEPT STATUS
+========================================================= */
+
+.concept-note-section {
+  padding: 100px 0;
+  background: var(--color-bg);
+}
+
+.concept-note {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 55px 40px;
+
+  border:
+    1px solid var(--color-border);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-surface),
+      var(--color-bg-secondary)
+    );
+
+  color: var(--color-text);
+
+  text-align: center;
+
+  box-shadow: var(--shadow-soft);
+}
+
+.concept-note::after {
+  content: "頂";
+
+  position: absolute;
+
+  right: 25px;
+  bottom: -70px;
+
+  color: rgba(178, 58, 58, 0.05);
+
+  font-family: "Noto Serif JP", serif;
+  font-size: 220px;
+  line-height: 1;
+
+  pointer-events: none;
+}
+
+.concept-note .small-label {
+  position: relative;
+  z-index: 1;
+}
+
+.concept-note h2 {
+  position: relative;
+  z-index: 1;
+
+  max-width: 900px;
+
+  margin: 14px auto 18px;
+
+  color: var(--color-text);
+
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.18;
+}
+
+.concept-note p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 760px;
+
+  margin: 0 auto 28px;
+
+  color: var(--color-text-muted);
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.concept-note .btn-outline {
+  position: relative;
+  z-index: 2;
+
+  border-color: var(--color-sakura);
+
+  background: var(--color-sakura);
+
+  color: #fff;
+}
+
+.concept-note .btn-outline:hover {
+  border-color: var(--color-sakura-light);
+
+  background: var(--color-sakura-light);
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   JOURNAL
+========================================================= */
+
+.journal-image-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.journal-image {
+  width: 100%;
+  height: 220px;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.journal-card:hover .journal-image {
+  transform: scale(1.045);
+}
+
+.journal-meta {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.journal-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 16px;
+
+  color: var(--color-sakura);
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DISH CARD META
+========================================================= */
+
+.dish-meta {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-top: 17px;
+  padding-top: 14px;
+
+  border-top:
+    1px solid var(--color-border);
+}
+
+.dish-category {
+  color: var(--color-text-muted);
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-info h2 {
+  margin: 12px 0 14px;
+
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.15;
+}
+
+.contact-info > p {
+  color: var(--color-text-muted);
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.contact-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-top: 25px;
+}
+
+.contact-list > div {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.contact-list svg {
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+
+  color: var(--color-sakura);
+}
+
+.social-link {
+  width: fit-content;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 20px;
+
+  padding: 9px 13px;
+
+  border:
+    1px solid var(--color-border);
+
+  border-radius: 8px;
+
+  color: var(--color-text);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.social-link:hover {
+  border-color: var(--color-sakura);
+  color: var(--color-sakura);
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-text);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.form-field label span {
+  color: var(--color-sakura);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+
+  border:
+    1px solid var(--color-border);
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: var(--color-bg);
+
+  color: var(--color-text);
+
+  padding: 12px 13px;
+
+  font-size: 11px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--color-sakura);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(178, 58, 58, 0.08);
+}
+
+.form-field textarea {
+  min-height: 145px;
+
+  resize: vertical;
+}
+
+.form-field small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--color-sakura);
+
+  font-size: 9px;
+}
+
+.form-submit {
+  width: 100%;
+
+  justify-content: center;
+
+  margin-top: 4px;
+}
+
+.form-note {
+  margin: 12px 0 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 9px;
+
+  line-height: 1.6;
+
+  text-align: center;
+}
+
+.form-success {
+  min-height: 300px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.form-success > svg {
+  margin-bottom: 15px;
+
+  color: var(--color-sakura);
+}
+
+.form-success h3 {
+  margin: 0 0 8px;
+
+  font-size: 24px;
+}
+
+.form-success p {
+  max-width: 470px;
+
+  margin: 0 0 22px;
+
+  color: var(--color-text-muted);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   GALLERY LIGHTBOX
+========================================================= */
+
+.lightbox-content {
+  max-width: min(1000px, 88vw);
+
+  margin: 0;
+
+  text-align: center;
+}
+
+.lightbox-content img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 78vh;
+
+  object-fit: contain;
+}
+
+.lightbox-content figcaption {
+  margin-top: 12px;
+
+  color: rgba(251, 241, 234, 0.7);
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.footer-brand-mark {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 18px;
+}
+
+.footer-brand-mark > span {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 9px;
+
+  background: var(--color-sakura);
+
+  color: #fff;
+
+  font-family: "Noto Serif JP", serif;
+
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.footer-brand-mark > div {
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.footer-brand-mark strong {
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: 17px;
+
+  letter-spacing: 1.5px;
+}
+
+.footer-brand-mark small {
+  margin-top: 5px;
+
+  color: var(--color-gold);
+
+  font-size: 7px;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.loading-tagline {
+  margin: 0;
+
+  color: rgba(251, 241, 234, 0.48);
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+.loading-japanese {
+  margin: 10px 0 0;
+
+  color: var(--color-gold);
+
+  font-family: "Noto Serif JP", serif;
+
+  font-size: 13px;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero-inner {
+    width:
+      min(calc(100% - 32px), 620px);
+  }
+
+  .hero-kanji {
+    right: -5%;
+    top: 42%;
+
+    font-size: 130px;
+
+    opacity: 0.7;
+  }
+
+  .story-banner-content {
+    width:
+      min(calc(100% - 32px), 620px);
+  }
+
+  .concept-note-section {
+    padding:
+      75px 0;
+  }
+
+  .concept-note {
+    padding:
+      38px 22px;
+  }
+
+  .concept-note h2 {
+    font-size:
+      28px;
+  }
+
+  .concept-note p {
+    font-size:
+      11px;
+  }
+
+  .journal-image {
+    height:
+      210px;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .hero-inner {
+    width:
+      calc(100% - 28px);
+  }
+
+  .hero-kanji {
+    right: -10%;
+    top: 38%;
+
+    font-size:
+      110px;
+  }
+
+  .story-banner-content {
+    width:
+      calc(100% - 28px);
+  }
+
+  .concept-note {
+    padding:
+      34px 18px;
+  }
+
+  .concept-note h2 {
+    font-size:
+      25px;
+  }
+}
